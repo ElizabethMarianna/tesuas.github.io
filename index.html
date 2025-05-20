@@ -2,51 +2,142 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Liam's Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e1e4e, #0f0f2c);
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: auto auto auto;
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .intro-img {
+      grid-column: 1;
+      grid-row: 1 / 2;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .intro-img img {
+      border-radius: 50%;
+      width: 200px;
+    }
+
+    .intro-text {
+      grid-column: 2;
+      grid-row: 1 / 2;
+    }
+
+    .contact {
+      grid-column: 3;
+      grid-row: 1 / 2;
+      line-height: 1.8em;
+    }
+
+    .skills-achievements {
+      grid-column: span 3;
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .skills, .achievements {
+      flex: 1;
+    }
+
+    .skills ul {
+      padding-left: 20px;
+    }
+
+    .section-title {
+      font-size: 1.8em;
+      font-weight: bold;
+      border-bottom: 2px solid #fff;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
+
+    .achievement-item {
+      margin-bottom: 15px;
+    }
+
+    a {
+      color: #87cefa;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <header class="header">
-      <img src="c:\Users\galah\OneDrive\Pictures\473826760_3248336085296664_6724614553959850152_n.jpg" alt="Liam Photo" class="profile-img"/>
-      <div class="intro">
-        <h1>HELLO<br>I'm Liam</h1>
-        <p>
-          As a student of the Digital Business program at
-          <a href="#">Universitas Widya Dharma Pontianak</a>,
-          I leverage artificial intelligence technology, specifically OpenAI's ChatGPT, to support my academic activities and professional competency development. This technology is utilized across various aspects, including research, content creation, and digital marketing strategies.
-        </p>
-      </div>
-      <div class="contact">
-        <p>📍 Gang Bersatu, no. 36</p>
-        <p>📞 081257539366</p>
-        <p>📧 <a href="mailto:william.hendri003@gmail.com">william.hendri003@gmail.com</a></p>
-      </div>
-    </header>
+    <div class="intro-img">
+      <img src="c:\Users\galah\OneDrive\Pictures\473826760_3248336085296664_6724614553959850152_n.jpg" alt="Liam's Photo">
+    </div>
 
-    <main class="content">
-      <section class="skills">
-        <h2>SKILLS</h2>
+    <div class="intro-text">
+      <h1>HELLO<br>I'm Liam</h1>
+      <p>
+        As a student of the Digital Business program at <a href="https://www.google.com/search?sca_esv=36354fdb691823cb&rlz=1C1GCEU
+        _enID1161ID1161&sxsrf=AHTn8zoGLrn4csr2kwR_PJ4yt3i0ViInpQ:1747758404358&q=universitas+widya+dharma+pontianak&source=lnms&fbs=
+        ABzOT_CWdhQLP1FcmU5B0fn3xuWpA-dk4wpBWOGsoR7DG5zJBjnSuuKZNj-6zieDk_gkn6CyymgG_tEVFNWvBwycIom9taAoUV-MBRhcR0XguGNwJe6ZdkWVS9sD6-
+        41PBhiACluBVv7Gerqm5NAmn_iOunG5TRtlnLMxQ7HzvY05SYwGjMcF77WdTG36w9-G2MnYWOrlfhW9NhvTy-3ojmemaf3iTtX4A&sa=X&ved=2ahUKEwiU_eC2u7KN
+        AxX34jgGHWAcIgEQ0pQJegQIFBAB&biw=1163&bih=574&dpr=1.65" target="_blank"><strong>Universitas Widya Dharma Pontianak</a></strong>,
+        I leverage artificial intelligence technology, specifically OpenAI's ChatGPT, to support my academic
+        activities and professional competency development. This technology is utilized across various aspects,
+        including research, content creation, and digital marketing strategies.
+      </p>
+    </div>
+
+    <div class="contact">
+      <p>📍 <a href="https://maps.app.goo.gl/xyVnEdZWP4KGw7UR8" target="_blank">Gang Bersatu, no. 36</a></p>
+      <p>📞 081257539366</p>
+      <p>📧 <a href="mailto:william.hendri003@gmail.com">william.hendri003@gmail.com</a></p>
+    </div>
+
+    <div class="skills-achievements">
+      <div class="skills">
+        <div class="section-title">SKILLS</div>
         <ul>
           <li><strong>Data Analysis and Interpretation</strong><br>Proficient in analyzing and interpreting data to inform strategic decisions. Tools: Excel, Google Analytics.</li>
           <li><strong>Digital Marketing and SEO</strong><br>Experienced in SEO, content marketing, and digital marketing strategies.</li>
           <li><strong>Data Visualization and Design</strong><br>Skilled in Tableau and Power BI for complex data presentations and effective decision-making.</li>
         </ul>
-      </section>
+      </div>
 
-      <section class="achievements">
-        <h2>ACHIEVEMENT</h2>
-        <ul>
-          <li><strong>1st Place</strong> in Infographic Competition at DigCoFest Go International<br>
-            Collaborated with a team to win 1st place in a competition by <a href="#">Universitas Negeri Surabaya</a>.</li>
-          <li><strong>3rd Place</strong> in International Business Plan Competition<br>
-            Held by <a href="#">Universitas Ibn Khaldun Bogor</a> with the theme “Explore and Develop Your Business Idea for a Brighter Future.”</li>
-          <li><strong>2nd Place</strong> in NUDC & KDMI Faculty-Level Debate Selection<br>
-            Won 2nd place in the National University Debating Championship and Indonesian Student Debate Competition.</li>
-        </ul>
-      </section>
-    </main>
+      <div class="achievements">
+        <div class="section-title">ACHIEVEMENT</div>
+        <div class="achievement-item">
+          <strong>1st Place</strong> in Infographic Competition at DigCoFest Go International<br>
+          Collaborated with a team to win 1st place in a competition by <a href= "https://unesa.ac.id/" target="_blank">Universitas Negeri Surabaya</a>.
+        </div>
+        <div class="achievement-item">
+          <strong>3rd Place</strong> in International Business Plan Competition<br>
+          Held by <a href="https://uika-bogor.ac.id/" target="_blank">Universitas Ibn Khaldun Bogor</a> with the theme “Explore and Develop Your Business Idea for a Brighter Future.”
+        </div>
+        <div class="achievement-item">
+          <strong>2nd Place</strong> in NUDC & KDMI Faculty-Level Debate Selection<br>
+          Won 2nd place in the National University Debating Championship and Indonesian Student Debate Competition.
+        </div>
+      </div>
+    </div>
   </div>
 </body>
+<footer>
+
+</footer>
 </html>
